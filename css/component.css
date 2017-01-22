@@ -1,0 +1,298 @@
+.tilter {
+	display: block;
+	position: relative;
+	max-width: 100%;
+	height: auto;
+	margin: 1em;
+	color: white;
+	flex: none; 
+	perspective: 1000px;
+	overflow:hidden; 
+	
+}
+
+
+.tilter * {
+	pointer-events: none;
+}
+
+.tilter:hover,
+.tilter:focus {
+	color: #fff;
+	outline: none;
+	
+	transform:scale(1.05);
+}
+
+
+  .tilter__figure,
+.tilter__deco,
+.tilter__caption {
+	will-change: transform;
+} 
+
+.tilter__figure,
+.tilter__image {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	
+}
+
+.tilter__figure > * {
+	transform: translateZ(0px); Force correct stacking order
+}
+
+.smooth .tilter__figure,
+.smooth .tilter__deco--overlay,
+.smooth .tilter__deco--lines,
+.smooth .tilter__deco--shine div,
+.smooth .tilter__caption {
+	transition: transform 0.2s ease-out;
+} 
+.tilter__figure {
+	position: relative;
+}
+
+.tilter__figure::before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 90%;
+	height: 90%; 
+	top: 5%;
+	left: 5%;
+	box-shadow:-7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+ 	
+ }  
+ .tilter__deco {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+
+
+ .tilter__deco--shine div {
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	top: -50%;
+	left: -50%;
+	background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0.25) 40%, transparent 100%);
+} 
+
+
+
+ .tilter__caption {
+	position: absolute;
+	 bottom: 5em; 
+	width: 100%;
+	 padding: 6em; 
+
+} 
+
+.tilter__title {
+	margin: 0;
+	font-weight: normal;
+	font-size: 2.5em;
+	font-family: 'Abril Fatface', serif;
+	line-height: 1;
+}
+
+ .tilter__description {
+	margin: 1em 0 0 0; 
+	font-size:1.5em;
+	letter-spacing: 0.15em;
+	position: relative;
+	left: 5em;
+	top: 2em;
+} 
+
+/* Individual styles */
+
+/* Example 1 (Default) */
+.tilter--1 .tilter__figure::before {
+	box-shadow: 0 30px 20px rgba(0,0,0,0.5);
+}
+
+.new-img {
+	position: absolute;
+	 right: 0.5em;
+	 top: 1.8em;
+
+}
+
+.flex-two{
+	display:flex; 
+	justify-content: center;
+	position: relative;
+	/* bottom: 3.5em; */
+	flex-wrap: wrap; 
+	height: auto;
+	max-width: 100%;
+	align-items: flex-start ;
+}
+
+
+
+
+.flex-side{
+	position: relative;
+	top:0.5em;
+	right: 0.35em; 
+}
+
+ .flex-one{
+	position: relative;
+	left:0.3em;
+	top:0.5em;
+}  
+.content img {
+	border-radius: 4px;
+}
+.flex-three{
+	position: relative;
+	top: 0.5em;
+	right: 0.7em; 
+}
+
+.block-img	{
+	position: relative;
+	right: 0.3em;
+}
+
+.new-img1{
+	position: absolute;
+	top: 14.5em;
+	left: 2em;
+}
+
+.decor {
+	position: absolute;
+	top: 8em;
+	right: 1em;
+}
+
+.decor-2{
+	position: absolute;
+	right: 0.5em;
+	top: 1em;
+}
+
+.decor-3{
+	position: absolute;
+	right: 4.8em;
+	
+
+}
+
+.work{
+	position: relative;
+	top: 3.5em;
+	left: 1.2em;
+	text-transform: uppercase;
+}
+
+.new-img2{
+	position: absolute;
+	bottom: 8em;
+	left: 2em;
+
+}
+
+.decor-4{
+	position: relative;
+	top:10em;
+	left: 21em;
+	
+}
+
+.new-img3{
+	position: absolute;
+	top:1em;
+	left: 5em;
+}
+
+.decor-5{
+	position:absolute;
+	top: 1em;
+	right: 0.5em;
+	
+}
+
+.button	{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	bottom: 1em;
+	color: rgb(242, 242, 242);
+
+
+}
+
+.button a {
+	text-transform: uppercase;
+	color: #fff;
+	color: rgb(242, 242, 242);
+	font-size: 20px;
+	padding: 15px 60px;
+	text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
+	background: rgb(67, 189, 251);
+	background: -moz-linear-gradient(90deg, rgb(67, 189, 251) 30%, rgb(102, 204, 255) 70%);
+	background: -webkit-linear-gradient(90deg, rgb(67, 189, 251) 30%, rgb(102, 204, 255) 70%);
+	background: -o-linear-gradient(90deg, rgb(67, 189, 251) 30%, rgb(102, 204, 255) 70%);
+	background: -ms-linear-gradient(90deg, rgb(67, 189, 251) 30%, rgb(102, 204, 255) 70%);
+	background: linear-gradient(0deg, rgb(67, 189, 251) 30%, rgb(102, 204, 255) 70%);
+	
+	
+
+}
+
+.button a:hover{
+	 color: #cacaca;
+  background: rgb(0, 79, 186);
+}
+
+.decor-6{
+	position: absolute;
+	bottom: 0.5em;
+	left: 0.1em;
+}
+
+.new-img4{
+	position: absolute;
+	top: 1.7em;
+	right: 6.5em;
+}
+
+.new-img4-2{
+	position: absolute;
+	bottom: 17em;
+	right: 2em;
+}
+
+.decor-7{
+	position: absolute;
+	top: 1em;
+	right: 4.7em;
+}
+
+.new-img5{
+	position: absolute;
+	left: 2em;
+	top: 2.5em;
+}
+
+.new-img5-2{
+	position:absolute;
+	right: 0;
+	top: 0;
+}
